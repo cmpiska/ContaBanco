@@ -42,7 +42,6 @@ public class ContaTerminal {
 
 
     public static void main(String[] args) throws Exception {
-
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Bem Vindo ao Banco Java");
@@ -60,8 +59,6 @@ public class ContaTerminal {
         System.out.println("Olá " + nomeCliente + ", obrigado por criar uma conta em nosso banco! ");
         System.out.println("Sua agência é " + agencia + ", conta " + numero + " e seu saldo de R$" + saldoInicial + " já está disponível para saque.");
         
-
-
         conta.iniciar();
         
         int opcao = scanner.nextInt();
