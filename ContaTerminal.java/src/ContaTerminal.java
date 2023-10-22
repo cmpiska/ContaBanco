@@ -70,11 +70,13 @@ public class ContaTerminal {
                 conta.iniciar();
                 break;
             } else if (opcao == 2){
+                System.out.println("Digite o valor do depósito!");
                 double valor = scanner.nextDouble();
                 conta.depositar(valor);
                 conta.iniciar();
                 break;
             }  else {
+                System.out.println("Digite o valor do saque!");
                 double valor = scanner.nextDouble();
                 conta.sacar(valor);
                 conta.iniciar();
