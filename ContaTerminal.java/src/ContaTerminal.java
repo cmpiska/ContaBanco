@@ -14,8 +14,14 @@ public class ContaTerminal {
         this.saldo = saldo;
     }
 
-    public void consultarSaldo(double valor) {
-        saldo += valor;
+    public void iniciar(){
+        System.out.println("Escolha uma opção para continuar: ");   
+        System.out.println("1 - Consultar saldo");
+        System.out.println("2 - Fazer um depósito");
+        System.out.println("3 - Fazer um saque");
+    }
+
+    public void consultarSaldo() {
         System.out.println("Seu saldo atual é: R$" + saldo);
     }
 
@@ -51,21 +57,28 @@ public class ContaTerminal {
         ContaTerminal conta = new ContaTerminal(numero, agencia, nomeCliente, saldoInicial);
 
 
-        System.out.println("Escolha uma opção para continuar: ");   
-        System.out.println("1 - Consultar saldo");
-        System.out.println("2 - Fazer um depósito");
-        System.out.println("3 - Fazer um saque");
+        //System.out.println("Escolha uma opção para continuar: ");   
+        //System.out.println("1 - Consultar saldo");
+       // System.out.println("2 - Fazer um depósito");
+        //System.out.println("3 - Fazer um saque");
+        conta.iniciar();
         
         int opcao = scanner.nextInt();
         while (( opcao > 0 ) && ( opcao < 4 )){
             if (opcao == 1){
                 conta.consultarSaldo();
+                conta.iniciar();
+                break;
             } else if (opcao == 2){
                 double valor = scanner.nextDouble();
-                conta.depositar(double valor);
+                conta.depositar(valor);
+                conta.iniciar();
+                break;
             }  else {
                 double valor = scanner.nextDouble();
-                conta.sacar(double valor);
+                conta.sacar(valor);
+                conta.iniciar();
+                break;
             }
         }
                      
