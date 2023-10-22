@@ -15,6 +15,7 @@ public class ContaTerminal {
     }
 
     public void iniciar(){
+        System.out.println(" ");
         System.out.println("Escolha uma opção para continuar: ");   
         System.out.println("1 - Consultar saldo");
         System.out.println("2 - Fazer um depósito");
@@ -45,22 +46,22 @@ public class ContaTerminal {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Bem Vindo ao Banco Java");
-
-        System.out.println("Digite o número da conta: ");
-        String numero = scanner.next();
+        
         System.out.println("Digite a agência: ");
         String agencia = scanner.next();
+        System.out.println("Digite o número da conta: ");
+        String numero = scanner.next();
         System.out.println("Digite o nome do cliente: ");
         String nomeCliente = scanner.next();
         System.out.println("Digite o saldo inicial: ");
         double saldoInicial = scanner.nextDouble();     
         ContaTerminal conta = new ContaTerminal(numero, agencia, nomeCliente, saldoInicial);
+        System.out.println(" ");
+        System.out.println("Olá " + nomeCliente + ", obrigado por criar uma conta em nosso banco! ");
+        System.out.println("Sua agência é " + agencia + ", conta " + numero + " e seu saldo de R$" + saldoInicial + " já está disponível para saque.");
+        
 
 
-        //System.out.println("Escolha uma opção para continuar: ");   
-        //System.out.println("1 - Consultar saldo");
-       // System.out.println("2 - Fazer um depósito");
-        //System.out.println("3 - Fazer um saque");
         conta.iniciar();
         
         int opcao = scanner.nextInt();
